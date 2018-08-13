@@ -1,0 +1,139 @@
+{
+  "main": {
+    "name":"Stillmen Vallian",
+    "occupation":"Photographer & Software Engineer",
+    "description":"I'm a fresh graduate from Parahyangan Catholic University (UNPAR) majoring in Informatics Engineering. Love to work with new technologies",
+    "image":"profilepic.jpg",
+    "shortBio":"A software engineer, photographer, video maker. Love to work in sadistic mode.",
+    "bio":"I'm fresh graduate from Parahyangan Catholic University majoring in Informatics Engineering. Apart from programming, I also love Photography. Photography is my hobby. I know photography since I was in high school (2010s) and until now I'm still active in it. Some of my experiences such as documenting some campus events, concerts, endorsement shot, beauty & casual shot. Not only photo, I also making several videos. The videos that I made, usually an 'after movie' (every activity held) an events. I'm already familiar with some editing software like Adobe Photoshop, Premiere and Lightroom.",
+    "bio2":"As a graduate in Informatics Engineering, I can use programming language like Java, PHP and HTML. Recently, I'm learning React.js (front-end framework) for self improvement. I made this website using React.js. For more information, you can visit my other resume page (link on the top right).",
+    "bio3":"",
+    "bio4":"",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "stillmen.v@gmail.com",
+    "phone": "+628-7788-90-7788",
+    "address":{
+      "street":"Jalan Bukit Jarian No.46A",
+      "city":"Bandung",
+      "state":"Jawa Barat",
+      "zip": "40141"
+    },
+    "skills":[
+      {
+        "name":"Photography",
+        "progress":"progress percent75",
+        "percent":"75%"
+      },
+      {
+        "name":"Videography",
+        "progress":"progress percent70",
+        "percent":"70%"
+      }
+    ],
+    "otherSkills":[
+      {
+        "name":"Adobe Photoshop",
+        "progress":"progress percent80",
+        "percent":"80%"
+      },
+      {
+        "name":"Adobe Lightroom",
+        "progress":"progress percent90",
+        "percent":"90%"
+      },
+      {
+        "name":"Adobe Premiere",
+        "progress":"progress percent75",
+        "percent":"75%"
+      }
+    ],
+    "website": "http://ayenz.github.io/",
+    "resumedownload":"",
+    "social":[
+      {
+        "name":"Facebook",
+        "url":"https://www.facebook.com/stillmen.vallian",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"Twitter",
+        "url":"http://twitter.com/stillmenvallian",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"Instagram",
+        "url":"http://instagram.com/stillmen_jr",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"Linkedin",
+        "url":"https://www.linkedin.com/in/stillmen-vallian/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"Whatsapp",
+        "url":"https://wa.me/+6287788907788",
+        "className":"fa fa-whatsapp"
+      },
+      {
+        "name":"Github",
+        "url":"http://github.com/ayenz",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "education":[
+      {
+        "school":"Parahyangan Catholic University",
+        "degree":"Bachelor's degree, Information Technology",
+        "graduated":"2014 - 2018",
+        "description":"I took my Bachelor's of Information Technology at Parahyangan Catholic University and achieved a much more thorough education in the underlying theory, concepts, and science behind more complex programming. It was here that I discovered many new technologies to create application programming (web and mobile)."
+      }
+    ],
+    "organization":[
+      {
+        "name":"Pemilu PM UNPAR 2016",
+        "year":"2016",
+        "position":"IT Expert Team"
+      },
+      {
+        "name":"Unpar Apps Team",
+        "year":"2015 - 2016",
+        "position":"Unpar Apps Promotion Manager"
+      },
+      {
+        "name":"Lembaga Kepresidenan Mahasiswa (LKM) UNPAR 2015 - 2016",
+        "year":"2015 - 2016",
+        "position":"Staff Directorate General Informatics Technology"
+      },
+      {
+        "name":"POTRET Organization",
+        "year":"2015 - 2016",
+        "position":"Vice Coordinator Media Division"
+      }
+    ],
+    "work":[
+      {
+        "company":"Anime Festival Asia (AFA) 2015",
+        "title":"Photographer",
+        "years":"September 2015",
+        "description":"Working under an event organizer named SOZO with a photographer job. Documenting the event for 3 days in the form of photos and videos"
+      }
+    ],
+    "experience":[
+      {
+        "name": "",
+        "position": "",
+        "date": "",
+        "description": ""
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+    ]
+  },
+  "testimonials":{
+  }
+}

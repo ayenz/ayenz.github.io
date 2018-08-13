@@ -1,0 +1,16 @@
+{
+  "main":{
+    "name": "Stillmen Vallian",
+    "occupation": "Photographer & Software Engineer",
+    "description":"A software engineer, photographer, video maker. Love to work in sadistic mode.",
+    "bio" : "I'm fresh graduate from Parahyangan Catholic University majoring in Informatics Engineering. Apart from programming, I also love Photography. Photography is my hobby. I know photography since I was in high school (2010s). Until now, I'm still active in it. Some of my experiences such as documenting some campus events, concerts, endorsement shot, beauty & casual shot. Not only photo, I also making several videos. The videos that I made, usually an 'after movie' (every activity held) an events. I'm already familiar with some editing software like Adobe Photoshop, Premiere and Lightroom.",
+    "bio2" : "As a graduate in Informatics Engineering, I can use programming language like Java, PHP and HTML. Recently, I'm learning React.js (front-end framework) for self improvement. I made this website using React.js. For more information, you can visit my other resume page (link on the top right).",
+    "address":{
+      "street":"Jalan Bukit Jarian No.46A",
+      "city":"Bandung",
+      "state":"Jawa Barat",
+      "zip": "40141"
+    },
+    "profilepicture": "images/profilepic.jpg"
+  }
+}
