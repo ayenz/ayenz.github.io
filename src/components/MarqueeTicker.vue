@@ -3,7 +3,9 @@ import { onMounted, onBeforeUnmount, ref } from 'vue'
 import gsap from 'gsap'
 import { scrollState } from '../composables/smooth.js'
 
-const rows = [
+const props = defineProps({ rows: { type: Array, default: null } })
+
+const defaultRows = [
   [
     'BREAKING: cat elected mayor of the group chat',
     'scientists confirm vibes are, in fact, real',
@@ -18,6 +20,7 @@ const rows = [
     'low battery, high spirits',
   ],
 ]
+const rows = props.rows || defaultRows
 
 const root = ref(null)
 const tracks = ref([])

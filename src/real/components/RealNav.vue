@@ -26,7 +26,7 @@ const go = (id) => getLenis()?.scrollTo(`#${id}`, { duration: 2 })
     <nav class="links">
       <a v-for="l in links" :key="l.id" :href="`#${l.id}`" class="mono" v-scramble @click.prevent="go(l.id)">{{ l.label }}</a>
     </nav>
-    <a href="/signal/" class="pill fake" v-magnetic data-cursor="lol">fake version ↗</a>
+    <a href="/" class="pill fake" v-magnetic data-cursor="mine">my 2026 ↗</a>
     <div class="progress"><span ref="progress" /></div>
   </header>
 </template>

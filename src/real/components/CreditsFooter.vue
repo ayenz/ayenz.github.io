@@ -24,7 +24,7 @@ const credits = Object.values(images)
         </p>
         <div class="actions">
           <button class="pill" v-magnetic @click="getLenis()?.scrollTo(0, { duration: 3 })">↑ back to top</button>
-          <a class="pill" href="/signal/" v-magnetic>see the fake version</a>
+          <a class="pill" href="/" v-magnetic>see my 2026</a>
         </div>
       </div>
       <div>

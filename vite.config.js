@@ -2,16 +2,17 @@ import { defineConfig } from 'vite'
 import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue'
 
-// Mirror GitHub Pages: /signal -> /signal/ instead of falling back to the root page.
+// Mirror GitHub Pages: /world -> /world/ instead of falling back to the root page.
 const trailingSlash = {
   name: 'trailing-slash',
   configureServer(s) { s.middlewares.use(redirect) },
   configurePreviewServer(s) { s.middlewares.use(redirect) },
 }
 function redirect(req, res, next) {
-  if (req.url === '/signal' || req.url.startsWith('/signal?')) {
+  const m = req.url.match(/^\/(world|signal)(\?.*)?$/)
+  if (m) {
     res.statusCode = 301
-    res.setHeader('Location', req.url.replace('/signal', '/signal/'))
+    res.setHeader('Location', `/${m[1]}/${m[2] || ''}`)
     return res.end()
   }
   next()
@@ -25,6 +26,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
+        world: resolve(import.meta.dirname, 'world/index.html'),
         signal: resolve(import.meta.dirname, 'signal/index.html'),
       },
     },

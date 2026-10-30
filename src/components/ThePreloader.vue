@@ -2,19 +2,26 @@
 import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 
+const props = defineProps({
+  log: {
+    type: Array,
+    default: () => [
+      'booting vibes.exe',
+      'calibrating chaos levels',
+      'downloading 2026 (this might take a year)',
+      'feeding the shaders',
+      'convincing the GPU this is fine',
+      'ok we good',
+    ],
+  },
+  tagline: { type: String, default: 'an almanac of a year that refused to be normal' },
+  brand: { type: String, default: 'SIGNAL//2026' },
+})
 const emit = defineEmits(['done'])
 const root = ref(null)
 const count = ref(0)
 const lines = ref([])
-
-const LOG = [
-  'booting vibes.exe',
-  'calibrating chaos levels',
-  'downloading 2026 (this might take a year)',
-  'feeding the shaders',
-  'convincing the GPU this is fine',
-  'ok we good',
-]
+const LOG = props.log
 
 onMounted(() => {
   const counter = { v: 0 }
@@ -50,8 +57,8 @@ onMounted(() => {
     </div>
     <div class="pre-inner">
       <div class="pre-meta mono">
-        <span>SIGNAL//2026</span>
-        <span>an almanac of a year that refused to be normal</span>
+        <span>{{ brand }}</span>
+        <span>{{ tagline }}</span>
       </div>
       <ul class="pre-log mono">
         <li v-for="(l, i) in lines" :key="l">
