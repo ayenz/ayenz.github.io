@@ -2,6 +2,7 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import gsap from 'gsap'
 import { getLenis } from '../../composables/smooth.js'
+import YearSwitch from '../../components/YearSwitch.vue'
 
 const time = ref('')
 const progress = ref(null)
@@ -26,7 +27,10 @@ onBeforeUnmount(() => clearInterval(timer))
       <span class="live"><i /> live</span>
       <span>{{ time }}</span>
     </div>
-    <a href="/world/" class="pill" v-magnetic data-cursor="globe">the world’s 2026 ↗</a>
+    <div class="right">
+      <YearSwitch :current="2026" />
+      <a href="/world/" class="pill" v-magnetic data-cursor="globe">the world’s 2026 ↗</a>
+    </div>
     <div class="progress"><span ref="progress" /></div>
   </header>
 </template>
@@ -71,10 +75,12 @@ onBeforeUnmount(() => clearInterval(timer))
 .live i { width: 6px; height: 6px; border-radius: 50%; background: #ff3d3d; animation: blink 1.2s infinite; }
 @keyframes blink { 50% { opacity: 0.2; } }
 .pill { padding: 10px 18px; background: rgba(10, 10, 12, 0.5); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.right { display: flex; align-items: center; gap: 10px; }
 .progress { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; }
 .progress span { display: block; height: 100%; background: var(--acid); transform: scaleX(0); transform-origin: left; }
 
 @media (max-width: 640px) {
   .nav-mid { display: none; }
+  .right .pill { display: none; }
 }
 </style>

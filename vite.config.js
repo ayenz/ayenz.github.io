@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue'
 
-// Mirror GitHub Pages: /world -> /world/ instead of falling back to the root page.
+// Mirror GitHub Pages: /world -> /world/ (etc.) instead of falling back to the root page.
 const trailingSlash = {
   name: 'trailing-slash',
   configureServer(s) { s.middlewares.use(redirect) },

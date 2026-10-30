@@ -10,8 +10,10 @@ import HomeNav from './components/HomeNav.vue'
 import HomeHero from './components/HomeHero.vue'
 import PhotoTimeline from './components/PhotoTimeline.vue'
 import PhotoLightbox from './components/PhotoLightbox.vue'
-import HomeOutro from './components/HomeOutro.vue'
 import HomeManifesto from './components/HomeManifesto.vue'
+import PhotoTunnel from './components/PhotoTunnel.vue'
+import WrappedStories from './components/WrappedStories.vue'
+import Terminal2027 from './components/Terminal2027.vue'
 
 const ready = ref(false)
 const open = ref(-1)
@@ -62,7 +64,9 @@ function onLoaded() {
     <MarqueeTicker :rows="rows" />
     <PhotoTimeline @open="open = $event" />
     <HomeManifesto />
-    <HomeOutro />
+    <PhotoTunnel @open="open = $event" />
+    <WrappedStories />
+    <Terminal2027 />
   </main>
   <PhotoLightbox v-model="open" />
   <CustomCursor />
