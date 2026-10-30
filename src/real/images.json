@@ -1,0 +1,218 @@
+{
+  "mullally": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Sarah_Mullally.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page": "https://commons.wikimedia.org/wiki/File:Sarah_Mullally.jpg",
+    "author": "Interestmedia",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 1663
+  },
+  "kendrick": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Kendrick_Lamar_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page": "https://commons.wikimedia.org/wiki/File:Kendrick_Lamar_crop.jpg",
+    "author": "Fuzheado",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 2200
+  },
+  "pope": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Pope_Leo_XIV_%28May_2025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page": "https://commons.wikimedia.org/wiki/File:Pope_Leo_XIV_(May_2025).jpg",
+    "author": "Edgar Beltrán / The Pillar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 2002
+  },
+  "mamdani": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/40/Zohran_Mamdani_at_the_White_House_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page": "https://commons.wikimedia.org/wiki/File:Zohran_Mamdani_at_the_White_House_(cropped).jpg",
+    "author": "White House",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "w": 1400,
+    "h": 2103
+  },
+  "olympics": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/OLYMPIC_OPENING_CEREMONY_MILANO-CORTINA_2026_STADIO_SAN_SIRO.jpg/1920px-OLYMPIC_OPENING_CEREMONY_MILANO-CORTINA_2026_STADIO_SAN_SIRO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:OLYMPIC_OPENING_CEREMONY_MILANO-CORTINA_2026_STADIO_SAN_SIRO.jpg",
+    "author": "ERIC SALARD",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 933
+  },
+  "seahawks": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Seattle_Seahawks_Super_Bowl_LX_parade_-_04.jpg/1920px-Seattle_Seahawks_Super_Bowl_LX_parade_-_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Seattle_Seahawks_Super_Bowl_LX_parade_-_04.jpg",
+    "author": "SounderBruce",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 933
+  },
+  "magyar": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Peter-Magyar-portrait-2026.jpg/1920px-Peter-Magyar-portrait-2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+    "author": "Norbert Banhalmi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 1865
+  },
+  "artemis": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/66/Artemis_II_Launch_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page": "https://commons.wikimedia.org/wiki/File:Artemis_II_Launch_(cropped).jpg",
+    "author": "NASA HQ PHOTO",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "w": 1400,
+    "h": 1865
+  },
+  "badbunny": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Bad_Bunny_Halftime_Show.jpg/1920px-Bad_Bunny_Halftime_Show.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Bad_Bunny_Halftime_Show.jpg",
+    "author": "Amandamotz",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "w": 1400,
+    "h": 1867
+  },
+  "earth": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Earth_From_the_Perspective_of_Artemis_II.jpg/1920px-Earth_From_the_Perspective_of_Artemis_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Earth_From_the_Perspective_of_Artemis_II.jpg",
+    "author": "Reid Wiseman/NASA",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "w": 1400,
+    "h": 933
+  },
+  "obama": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Barack_Obama_Presidential_Center_April_2026_01.jpg/1920px-Barack_Obama_Presidential_Center_April_2026_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Barack_Obama_Presidential_Center_April_2026_01.jpg",
+    "author": "Claire Fridkin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 1930
+  },
+  "knicks": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/2026_NBA_Champions_New_York_Knicks_City_Hall_Ceremony_07.png/1920px-2026_NBA_Champions_New_York_Knicks_City_Hall_Ceremony_07.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:2026_NBA_Champions_New_York_Knicks_City_Hall_Ceremony_07.png",
+    "author": "Unknown author",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "w": 1400,
+    "h": 785
+  },
+  "swift": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Wedding_of_Taylor_Swift_and_Travis_Kelce_outside_MSG_22.jpg/1920px-Wedding_of_Taylor_Swift_and_Travis_Kelce_outside_MSG_22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Wedding_of_Taylor_Swift_and_Travis_Kelce_outside_MSG_22.jpg",
+    "author": "SWinxy",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "w": 1400,
+    "h": 932
+  },
+  "usa250": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/United_States_Semiquincentennial_fireworks_in_Virginia_-_4.jpg/1920px-United_States_Semiquincentennial_fireworks_in_Virginia_-_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:United_States_Semiquincentennial_fireworks_in_Virginia_-_4.jpg",
+    "author": "APK",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "w": 1400,
+    "h": 1745
+  },
+  "sinner": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Jannik_Sinner_Wimbledon_2026_trophy_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page": "https://commons.wikimedia.org/wiki/File:Jannik_Sinner_Wimbledon_2026_trophy_(cropped).jpg",
+    "author": "Daniel Cooper",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 2325
+  },
+  "sagrada": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Sagrada_Familia_in_Barcelona%2C_Spain.jpg/1920px-Sagrada_Familia_in_Barcelona%2C_Spain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Sagrada_Familia_in_Barcelona,_Spain.jpg",
+    "author": "WikiJana1",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 1867
+  },
+  "spain": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Spain_World_Cup_Winners_Argentina_v_Spain_19_July_2026-1.jpg/1920px-Spain_World_Cup_Winners_Argentina_v_Spain_19_July_2026-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Spain_World_Cup_Winners_Argentina_v_Spain_19_July_2026-1.jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 933
+  },
+  "pogacar": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Tadej_Poga%C4%8Dar_at_2026_Tour_de_France_%28Stage_21%29_%28cropped%29.jpg/960px-Tadej_Poga%C4%8Dar_at_2026_Tour_de_France_%28Stage_21%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Tadej_Poga%C4%8Dar_at_2026_Tour_de_France_(Stage_21)_(cropped).jpg",
+    "author": "Kiril Simeonovski",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 1833
+  },
+  "eclipse": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Eclipse-totale-2026-couronne-Luc-Viatour.jpg/1920px-Eclipse-totale-2026-couronne-Luc-Viatour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Eclipse-totale-2026-couronne-Luc-Viatour.jpg",
+    "author": "Lviatour",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 1036
+  },
+  "haakon": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/King_Haakon_VIII_arrives_Stortinget.jpg/1920px-King_Haakon_VIII_arrives_Stortinget.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:King_Haakon_VIII_arrives_Stortinget.jpg",
+    "author": "Birgit Fostervold",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 933
+  },
+  "route66": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Begin_Route_66_sign_in_Chicago_%28June_2025%29.jpg/1920px-Begin_Route_66_sign_in_Chicago_%28June_2025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Begin_Route_66_sign_in_Chicago_(June_2025).jpg",
+    "author": "AlphaBeta135",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "w": 1400,
+    "h": 1050
+  },
+  "kane": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Harry_Kane_England_v_Ghana_23_June_2026-067.jpg/1920px-Harry_Kane_England_v_Ghana_23_June_2026-067.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Harry_Kane_England_v_Ghana_23_June_2026-067.jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 2100
+  },
+  "lula": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/16.08.2026_-_Lan%C3%A7amento_Oficial_da_Campanha_de_Lula_2026_-_55467943329.jpg/1920px-16.08.2026_-_Lan%C3%A7amento_Oficial_da_Campanha_de_Lula_2026_-_55467943329.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:16.08.2026_-_Lan%C3%A7amento_Oficial_da_Campanha_de_Lula_2026_-_55467943329.jpg",
+    "author": "Lula Oficial",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "w": 1400,
+    "h": 1620
+  },
+  "brewers": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Win_Our_Way_Brewers_2026_-_Baird_Center.jpg/1920px-Win_Our_Way_Brewers_2026_-_Baird_Center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Win_Our_Way_Brewers_2026_-_Baird_Center.jpg",
+    "author": "ARandomCatalyst",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "w": 1400,
+    "h": 789
+  }
+}

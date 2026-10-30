@@ -1,0 +1,17 @@
+:root {
+  --bg: #08080a;
+  --bg-2: #111114;
+  --fg: #f2ede4;
+  --muted: #8d897f;
+  --line: rgba(242, 237, 228, 0.12);
+  --red: #ff3b1f;
+  --acid: #ff3b1f;
+  --sans: 'Inter Tight', system-ui, sans-serif;
+  --serif: 'Fraunces', Georgia, serif;
+}
+
+.serif { font-family: var(--serif); font-style: italic; font-weight: 300; }
+.eyebrow::before { background: var(--red); box-shadow: 0 0 12px var(--red); }
+.pill::before { background: var(--red); }
+.pill:hover { color: var(--fg); border-color: var(--red); }
+::selection { background: var(--red); color: var(--fg); }
