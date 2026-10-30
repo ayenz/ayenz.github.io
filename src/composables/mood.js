@@ -8,6 +8,7 @@ export const MOODS = {
   manifesto:{ a: '#08080a', b: '#ecebe4', c: '#c6ff3d', x: -2.4, y: 0,    scale: 0.9,  intensity: 1.6 },
   objects:  { a: '#2b1405', b: '#ff7a2f', c: '#4f7bff', x: 2.6,  y: -0.6, scale: 0.6,  intensity: 0.9 },
   stats:    { a: '#05122b', b: '#4f7bff', c: '#c6ff3d', x: -2,   y: 1,    scale: 0.7,  intensity: 1.6 },
+  reflect:  { a: '#0b1a10', b: '#c6ff3d', c: '#ff4fd8', x: 2.9,  y: -0.6, scale: 0.7,  intensity: 0.8 },
   outro:    { a: '#1a0626', b: '#ff4fd8', c: '#c6ff3d', x: 2.2,  y: 0.6,  scale: 0.9,  intensity: 1 },
 }
 

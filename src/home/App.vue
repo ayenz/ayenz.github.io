@@ -11,6 +11,7 @@ import HomeHero from './components/HomeHero.vue'
 import PhotoTimeline from './components/PhotoTimeline.vue'
 import PhotoLightbox from './components/PhotoLightbox.vue'
 import HomeOutro from './components/HomeOutro.vue'
+import HomeManifesto from './components/HomeManifesto.vue'
 
 const ready = ref(false)
 const open = ref(-1)
@@ -60,6 +61,7 @@ function onLoaded() {
     <HomeHero :ready="ready" />
     <MarqueeTicker :rows="rows" />
     <PhotoTimeline @open="open = $event" />
+    <HomeManifesto />
     <HomeOutro />
   </main>
   <PhotoLightbox v-model="open" />
