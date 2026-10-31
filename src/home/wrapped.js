@@ -1,6 +1,6 @@
-import { months } from './months.js'
+import { prints } from './months.js'
 
-const shot = months.filter((m) => m.photo)
+const shot = prints
 
 const km = ([a, b], [c, d]) => {
   const r = (x) => (x * Math.PI) / 180
@@ -33,4 +33,4 @@ export const mix = Object.entries(BUCKETS)
   .sort((a, b) => b.n - a.n)
 
 export const total = shot.length
-export const photos = shot.map((m) => m.photo)
+export const photos = shot.map((m) => m.src)

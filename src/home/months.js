@@ -1,10 +1,15 @@
-// Photos live in ./photos named by month number: 01.jpg … 10.jpg
+// Photos live in ./photos named month-index: 01.jpg or 01-1.jpg, 01-2.jpg …
 // (resized, metadata stripped). Missing months show a gradient placeholder.
 const files = import.meta.glob('./photos/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default' })
-const photoFor = (n) => {
-  const key = Object.keys(files).find((f) => f.match(/\/(\d{2})\.\w+$/)?.[1] === n)
-  return key ? files[key] : null
-}
+const photosFor = (n) =>
+  Object.keys(files)
+    .map((f) => ({ f, m: f.match(/\/(\d{2})(?:-(\d+))?[^/]*\.\w+$/) }))
+    .filter(({ m }) => m && m[1] === n)
+    .map(({ f, m }) => ({ key: `${n}-${m[2] || 1}`, k: Number(m[2] || 1), src: files[f] }))
+    .sort((a, b) => a.k - b.k)
+
+// Optional per-photo caption / place, keyed '01-2' etc. Falls back to the month's.
+const PHOTOS = {}
 
 // place / loc: city-level only (read from photo GPS, never exact coordinates)
 const MONTHS = [
@@ -32,9 +37,20 @@ const MONTHS = [
 
 export const months = MONTHS.map((x, i) => {
   const n = String(i + 1).padStart(2, '0')
-  return {
-    ...x,
-    n,
-    photo: photoFor(n),
-  }
+  const photos = photosFor(n).map((p) => ({ ...p, ...PHOTOS[p.key] }))
+  return { ...x, n, photos, photo: photos[0]?.src || null }
 })
+
+// Every photo in order, each knowing its month.
+export const prints = months.flatMap((mo, mi) =>
+  mo.photos.map((p, pi) => ({
+    ...mo,
+    ...p,
+    mi,
+    pi,
+    of: mo.photos.length,
+    place: p.place || mo.place,
+    loc: p.loc || mo.loc,
+    caption: p.caption || mo.title,
+  })),
+)

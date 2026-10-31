@@ -1,0 +1,24 @@
+:root {
+  --bg: #efe6d6;
+  --bg-2: #e6dac4;
+  --fg: #1d1915;
+  --muted: #7a6f60;
+  --line: rgba(29, 25, 21, 0.16);
+  --acid: #e2541b;
+  --pink: #c8324a;
+  --teal: #2f6f6a;
+  --paper: #fbf7ef;
+  --sans: 'Manrope', system-ui, sans-serif;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --mono: 'Courier Prime', ui-monospace, monospace;
+  --hand: 'Caveat', cursive;
+}
+
+.serif { font-family: var(--serif); font-style: italic; font-weight: 400; }
+.mono { letter-spacing: 0.04em; }
+.eyebrow::before { background: var(--acid); box-shadow: none; }
+.pill { border-color: rgba(29, 25, 21, 0.3); }
+.pill::before { background: var(--fg); }
+.pill:hover { color: var(--bg); border-color: var(--fg); }
+::selection { background: var(--acid); color: var(--paper); }
+.grain { opacity: 0.12; mix-blend-mode: multiply; }

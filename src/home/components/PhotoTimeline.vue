@@ -2,17 +2,31 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { months } from '../months.js'
+import { months, prints } from '../months.js'
 
 const emit = defineEmits(['open'])
 const root = ref(null)
 const track = ref(null)
 const active = ref(-1)
+const aspect = ref({}) // natural width / height per print, so landscape shots stay landscape
 let mm
 
+// One card per photo (months with several get several cards); empty months keep a placeholder.
+const cards = months.flatMap((mo, mi) => {
+  const own = prints.map((p, idx) => ({ ...p, idx })).filter((p) => p.mi === mi)
+  return own.length ? own : [{ ...mo, key: mo.n, idx: -1, of: 0 }]
+})
+
 onMounted(() => {
+  Promise.all(prints.map((p, i) => new Promise((done) => {
+    const img = new Image()
+    img.onload = () => { aspect.value[i] = img.naturalWidth / img.naturalHeight; done() }
+    img.onerror = done
+    img.src = p.src
+  }))).then(() => requestAnimationFrame(() => ScrollTrigger.refresh()))
+
   mm = gsap.matchMedia()
-  const cards = gsap.utils.toArray('.month', root.value)
+  const cardEls = gsap.utils.toArray('.month', root.value)
 
   mm.add('(min-width: 900px)', () => {
     const distance = () => track.value.scrollWidth - window.innerWidth
@@ -28,17 +42,20 @@ onMounted(() => {
         invalidateOnRefresh: true,
       },
     })
-    cards.forEach((card, i) => {
+    cardEls.forEach((card, i) => {
       gsap.fromTo(card.querySelector('.art-num'), { xPercent: 60 }, {
         xPercent: -30,
         ease: 'none',
         scrollTrigger: { trigger: card, containerAnimation: scroller, start: 'left right', end: 'right left', scrub: true },
       })
-      gsap.fromTo(card.querySelector('.art img'), { xPercent: -8 }, {
-        xPercent: 8,
-        ease: 'none',
-        scrollTrigger: { trigger: card, containerAnimation: scroller, start: 'left right', end: 'right left', scrub: true },
-      })
+      const img = card.querySelector('.art img')
+      if (img) {
+        gsap.fromTo(img, { xPercent: -8 }, {
+          xPercent: 8,
+          ease: 'none',
+          scrollTrigger: { trigger: card, containerAnimation: scroller, start: 'left right', end: 'right left', scrub: true },
+        })
+      }
       gsap.from(card.querySelectorAll('.reveal'), {
         y: 60,
         opacity: 0,
@@ -58,7 +75,7 @@ onMounted(() => {
   })
 
   mm.add('(max-width: 899px)', () => {
-    cards.forEach((card, i) => {
+    cardEls.forEach((card, i) => {
       gsap.from(card, {
         y: 80,
         opacity: 0,
@@ -85,23 +102,23 @@ onBeforeUnmount(() => mm?.revert())
     <div ref="track" class="track">
       <div class="intro">
         <p class="eyebrow mono">the camera roll</p>
-        <h2>Ten months.<br /><span class="serif">Ten</span> photos.</h2>
-        <p class="lede">One picture per month, January to October. The photos are real. The captions are… mostly real. Click any card to see it big.</p>
+        <h2>Ten months.<br /><span class="serif">{{ prints.length }}</span> photos.</h2>
+        <p class="lede">Snapshots from January to October. The photos are real. The captions are… mostly real. Click any card to see it big.</p>
         <span class="hint mono">scroll → → →</span>
       </div>
 
       <article
-        v-for="(item, i) in months"
-        :key="item.m"
+        v-for="(item, i) in cards"
+        :key="item.key"
         class="month"
-        :class="{ active: active === i, 'has-photo': item.photo }"
-        :style="{ '--h': item.hue }"
+        :class="{ active: active === i, 'has-photo': item.idx >= 0, landscape: (aspect[item.idx] || 0.8) > 1.05 }"
+        :style="{ '--h': item.hue, '--ar': aspect[item.idx] || 0.8 }"
         v-tilt="8"
-        :data-cursor="item.photo ? 'view' : 'soon'"
-        @click="item.photo && emit('open', i)"
+        :data-cursor="item.idx >= 0 ? 'view' : 'soon'"
+        @click="item.idx >= 0 && emit('open', item.idx)"
       >
         <div class="art">
-          <img v-if="item.photo" :src="item.photo" :alt="`${item.m} 2026 — ${item.title}`" loading="lazy" decoding="async" />
+          <img v-if="item.idx >= 0" :src="item.src" :alt="`${item.m} 2026 — ${item.caption}`" loading="lazy" decoding="async" />
           <template v-else>
             <div class="art-blob" />
             <span class="soon mono">photo loading…</span>
@@ -110,10 +127,11 @@ onBeforeUnmount(() => mm?.revert())
           <span class="art-num">{{ item.n }}</span>
         </div>
         <div class="meta reveal mono">
-          <span>{{ item.m }} 2026<template v-if="item.place"> · <span class="place">{{ item.place }}</span></template></span>
+          <span>{{ item.m }} 2026<template v-if="item.place"> · <span class="place">{{ item.place }}</span></template><template v-if="item.of > 1"> · {{ item.pi + 1 }}/{{ item.of }}</template></span>
           <span class="tag">#{{ item.tag }}</span>
         </div>
         <h3 class="reveal">{{ item.title }}</h3>
+        <p v-if="item.of > 1 && item.caption !== item.title" class="reveal cap">“{{ item.caption }}”</p>
         <p class="reveal">{{ item.body }}</p>
         <div class="glare" />
       </article>
@@ -161,11 +179,12 @@ onBeforeUnmount(() => mm?.revert())
   transition: border-color 0.5s var(--ease);
 }
 .month.active { border-color: var(--c); }
+.month.landscape { width: clamp(380px, 34vw, 520px); }
 .month:nth-of-type(even) { margin-top: 14vh; }
 .month:nth-of-type(odd) { margin-bottom: 14vh; }
 .art {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: var(--ar, 0.8);
   max-height: 52vh;
   width: 100%;
   border-radius: 18px;
@@ -222,6 +241,7 @@ onBeforeUnmount(() => mm?.revert())
 .place { color: var(--fg); }
 .month h3 { font-size: 26px; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 10px; }
 .month p { color: #b9b8b0; line-height: 1.5; font-size: 15px; }
+.month .cap { font-family: var(--serif); font-style: italic; color: var(--c); font-size: 18px; margin-bottom: 6px; }
 .glare {
   position: absolute;
   inset: 0;

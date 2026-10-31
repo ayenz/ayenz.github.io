@@ -9,7 +9,7 @@ const trailingSlash = {
   configurePreviewServer(s) { s.middlewares.use(redirect) },
 }
 function redirect(req, res, next) {
-  const m = req.url.match(/^\/(world|signal)(\?.*)?$/)
+  const m = req.url.match(/^\/(world|signal|2025)(\?.*)?$/)
   if (m) {
     res.statusCode = 301
     res.setHeader('Location', `/${m[1]}/${m[2] || ''}`)
@@ -26,6 +26,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
+        y2025: resolve(import.meta.dirname, '2025/index.html'),
         world: resolve(import.meta.dirname, 'world/index.html'),
         signal: resolve(import.meta.dirname, 'signal/index.html'),
       },

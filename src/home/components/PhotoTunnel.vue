@@ -7,7 +7,7 @@ import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPa
 import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { months } from '../months.js'
+import { prints } from '../months.js'
 
 const emit = defineEmits(['open'])
 const root = ref(null)
@@ -17,7 +17,7 @@ const hovering = ref(false)
 let renderer, composer, raf, io, st, cleanup = () => {}
 
 const SPACING = 7
-const shots = months.map((m, i) => ({ ...m, i })).filter((m) => m.photo)
+const shots = prints.map((p, i) => ({ ...p, i, photo: p.src }))
 
 const photoVert = /* glsl */ `
 varying vec2 vUv;

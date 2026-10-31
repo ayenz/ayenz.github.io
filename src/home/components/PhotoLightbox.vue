@@ -1,13 +1,12 @@
 <script setup>
 import { nextTick, onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import gsap from 'gsap'
-import { months } from '../months.js'
+import { prints } from '../months.js'
 import { getLenis } from '../../composables/smooth.js'
 
 const index = defineModel({ type: Number, default: -1 })
 const root = ref(null)
 const img = ref(null)
-const withPhoto = months.map((m, i) => (m.photo ? i : -1)).filter((i) => i >= 0)
 
 watch(index, async (i, prev) => {
   if (i >= 0 && prev < 0) {
@@ -34,8 +33,7 @@ function close() {
 }
 
 function step(dir) {
-  const at = withPhoto.indexOf(index.value)
-  index.value = withPhoto[(at + dir + withPhoto.length) % withPhoto.length]
+  index.value = (index.value + dir + prints.length) % prints.length
 }
 
 const onKey = (e) => {
@@ -51,12 +49,13 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 <template>
   <div v-if="index >= 0" ref="root" class="lb" role="dialog" aria-modal="true" @click.self="close">
     <figure class="lb-fig" @click.self="close">
-      <img ref="img" :src="months[index].photo" :alt="`${months[index].m} 2026 — ${months[index].title}`" />
+      <img ref="img" :src="prints[index].src" :alt="`${prints[index].m} 2026 — ${prints[index].caption}`" />
     </figure>
     <div class="lb-info">
-      <span class="lb-anim mono">{{ months[index].n }} / {{ months[index].m }} 2026<template v-if="months[index].place"> · {{ months[index].place }}</template></span>
-      <h3 class="lb-anim">{{ months[index].title }}</h3>
-      <p class="lb-anim">{{ months[index].body }}</p>
+      <span class="lb-anim mono">{{ prints[index].n }} / {{ prints[index].m }} 2026<template v-if="prints[index].place"> · {{ prints[index].place }}</template><template v-if="prints[index].of > 1"> · {{ prints[index].pi + 1 }}/{{ prints[index].of }}</template></span>
+      <h3 class="lb-anim">{{ prints[index].title }}</h3>
+      <p v-if="prints[index].of > 1 && prints[index].caption !== prints[index].title" class="lb-anim cap">“{{ prints[index].caption }}”</p>
+      <p class="lb-anim">{{ prints[index].body }}</p>
     </div>
     <div class="lb-ctrl">
       <button class="pill" v-magnetic aria-label="Previous photo" @click="step(-1)">←</button>
@@ -86,6 +85,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 .lb-info .mono { color: var(--acid); }
 .lb-info h3 { font-size: clamp(32px, 3.4vw, 52px); letter-spacing: -0.04em; line-height: 1; margin: 12px 0 14px; }
 .lb-info p { color: #b9b8b0; line-height: 1.55; }
+.lb-info .cap { font-family: var(--serif); font-style: italic; color: var(--acid); font-size: 22px; margin-bottom: 8px; }
 .lb-ctrl { display: flex; gap: 8px; flex-wrap: wrap; }
 
 @media (max-width: 899px) {

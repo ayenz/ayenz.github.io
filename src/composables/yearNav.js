@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 
 export const YEARS = [
+  { y: 2025, href: '/2025/', color: '#efe6d6', ink: '#1d1915' },
   { y: 2026, href: '/', color: '#0a0a0c', ink: '#ecebe4' },
 ]
 
